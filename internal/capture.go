@@ -26,7 +26,7 @@ func StartCapture(packetChan chan<- PacketData, signalChan chan os.Signal) {
 
 		// 启动新的捕获进程
 		log.Printf("开始捕获文件 capture_%d.pcapng\n", index)
-		currentCmd := exec.Command("sudo", "./ecapture", "tls", "-m", "pcapng", "-i", "any", "--pcapfile", pcapFile)
+		currentCmd := exec.Command("sudo", "./ecapture", "tls", "-m", "pcapng", "-i", "ens33", "--pcapfile", pcapFile)
 		if err := currentCmd.Start(); err != nil {
 			log.Printf("启动捕获失败: %v\n", err)
 			return

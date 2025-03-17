@@ -2,10 +2,10 @@ package internal
 
 import (
 	"fmt"
-	"regexp"
 	"strings"
 	"unicode"
 	"unicode/utf8"
+        "bytes"
 )
 
 // 处理从 chan 接收到的数据包
